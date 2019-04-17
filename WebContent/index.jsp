@@ -2,9 +2,16 @@
 <head>
 <title>ViewTube</title>
 <link rel="stylesheet" href="resources/scss/viewtube.css"/>
+<script></script>
 </head>
 <body>
-	<br>
+    <!-- The banner at the top of the webpage  -->
+	<div class="vt-ribbon-home ">
+	    <a class="vt-ribbon-viewtube" href="#">ViewTube</a>
+	    <a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a>
+		<input class="vt-ribbon-input" type="search">
+		<button class="vt-ribbon-button"></button>
+	</div>
 	<div style="text-align: center">
 		<h2>
 			Welcome to ViewTube
