@@ -64,6 +64,23 @@ RULES FOR CLASSES
 	border-radius: 48px;
 }
 
+		/*
+		--------------------------------------------------------------------
+		RULES FOR BOTTOM BANNER
+		--------------------------------------------------------------------
+		*/
+.vt-bottom-ribbon {
+	
+}
+.vt-bottom-ribbon-list {
+	list-style-type : none;
+}
+.vt-bottom-ribbon-list-elem {
+	display : inline-block;
+}
+.vt-bottom-ribbon-link {
+	text-decoration : none;
+}
 /*
 -----------------------------------------------------------------------------
 ID LEVEL RULES

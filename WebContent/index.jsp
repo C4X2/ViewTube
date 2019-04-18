@@ -37,9 +37,11 @@
 	</div>
 	
 	<div class="vt-bottom-ribbon">
-		<a href="about.html">About</a>
-		<a href="contactus.html">Contact Us</a>
-		<a href="developer.html">Developers</a>
+		<ul class="vt-bottom-ribbon-list">
+		<li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href="about.html">About</a></li>
+		<li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href="contactus.html">Contact Us</a></li>
+		<li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href="developer.html">Developers</a></li>
+		</ul>
 	</div>
 </body>
 </html>
