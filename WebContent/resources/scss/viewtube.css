@@ -49,8 +49,8 @@ RULES FOR CLASSES
 	
 }
 .vt-ribbon-input {
-	width  : 576 px;
-	height : 36 px;
+	max-width  : 376 px;
+	max-height : 36 px;
 }
 .vt-ribbon-button {
 	
@@ -62,6 +62,7 @@ RULES FOR CLASSES
 	height : 50; 
 	max-width : 50;
 	border-radius: 48px;
+	
 }
 
 		/*

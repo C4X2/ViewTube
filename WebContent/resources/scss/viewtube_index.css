@@ -24,11 +24,9 @@ RULES FOR CLASSES
 .vt-main {
 	background-color : grey;
 	text-align       : center;
-	MAX-HEIGHT       : 100%;
+	MAX-HEIGHT       : 1080px;
 	MIN-HEIGHT       : 360px;
 	MAX-WIDTH        : 100%;
-	height           : 100%;
-	width            : 100%;
 	bottom           : 0;
 	background-image : linear-gradient(#F0FFFF, #808080, #666666, black);
 
