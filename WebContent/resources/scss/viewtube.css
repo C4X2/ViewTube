@@ -38,9 +38,9 @@ RULES FOR CLASSES
 	list-style-type : none;
 }
 .vt-ribbon-list-elem {
-	display : inline-block;
+	display       : inline-block;
 	right-padding : 20px;
-	left-padding : 20px;
+	left-padding  : 20px;
 }
 .vt-ribbon-viewtube {
 	text-decoration : none;
@@ -49,7 +49,7 @@ RULES FOR CLASSES
 	
 }
 .vt-ribbon-input {
-	width : 576 px;
+	width  : 576 px;
 	height : 36 px;
 }
 .vt-ribbon-button {
@@ -70,12 +70,12 @@ RULES FOR CLASSES
 		--------------------------------------------------------------------
 		*/
 .vt-bottom-ribbon {
-	overflow: hidden;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height : 72px;
-	border : 2px;
+	overflow : hidden;
+	position : fixed;
+	bottom   : 0;
+	width    : 100%;
+	height   : 72px;
+	border   : 2px;
 }
 .vt-bottom-ribbon-list {
 	list-style-type : none;

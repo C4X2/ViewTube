@@ -24,12 +24,9 @@ RULES FOR CLASSES
 .vt-main {
 	background-color : grey;
 	text-align       : center;
-	/*
-	PROPERTIES TO USE
-	MAX-HEIGHT
-	MIN-HEIGHT
-	MAX-WIDTH
-	*/
+	MAX-HEIGHT       : 100%;
+	MIN-HEIGHT       : 360px;
+	MAX-WIDTH        : 100%;
 	height           : 100%;
 	width            : 100%;
 	bottom           : 0;
