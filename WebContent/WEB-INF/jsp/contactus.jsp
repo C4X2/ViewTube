@@ -10,6 +10,9 @@
 	<h1>
 		Contact Us!
 	</h1>
+	<div>
+	${developer}
+	</div>
 	${contactus}
 </body>
 </html>
