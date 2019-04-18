@@ -60,7 +60,7 @@ RULES FOR CLASSES
 }
 .vt-ribbon-icon {
 	height : 50; 
-	width : 50;
+	max-width : 50;
 	border-radius: 48px;
 }
 
@@ -70,7 +70,12 @@ RULES FOR CLASSES
 		--------------------------------------------------------------------
 		*/
 .vt-bottom-ribbon {
-	
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height : 72px;
+	border : 2px;
 }
 .vt-bottom-ribbon-list {
 	list-style-type : none;

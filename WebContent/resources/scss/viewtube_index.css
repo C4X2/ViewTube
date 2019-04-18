@@ -23,9 +23,18 @@ RULES FOR CLASSES
 */
 .vt-main {
 	background-color : grey;
-	text-align : center;
-	background-image: linear-gradient(#F0FFFF, #808080, #666666,black);
-	
+	text-align       : center;
+	/*
+	PROPERTIES TO USE
+	MAX-HEIGHT
+	MIN-HEIGHT
+	MAX-WIDTH
+	*/
+	height           : 100%;
+	width            : 100%;
+	bottom           : 0;
+	background-image : linear-gradient(#F0FFFF, #808080, #666666, black);
+
 }
 
 /*
