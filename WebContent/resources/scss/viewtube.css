@@ -5,7 +5,7 @@ RULE FOR GRADIANT VIEW
 ============================================================================
 */
 *{
-	background-color: blue;
+	
 }
 
 /*
@@ -25,11 +25,43 @@ h4{
 RULES FOR CLASSES
 ============================================================================
 */
+		/*
+		--------------------------------------------------------------------
+		RULES FOR TOP BANNER
+		--------------------------------------------------------------------
+		*/
 .vt-ribbon-home {
-	
+	/*display : inline-block;*/
+	padding : 0 px;
+}
+.vt-ribbon-list {
+	list-style-type : none;
+}
+.vt-ribbon-list-elem {
+	display : inline-block;
+	right-padding : 20px;
+	left-padding : 20px;
 }
 .vt-ribbon-viewtube {
+	text-decoration : none;
+}
+.vt-ribbon-random {
 	
+}
+.vt-ribbon-input {
+	width : 576 px;
+	height : 36 px;
+}
+.vt-ribbon-button {
+	
+}
+.vt-ribbon-personal {
+	
+}
+.vt-ribbon-icon {
+	height : 50; 
+	width : 50;
+	border-radius: 48px;
 }
 
 /*

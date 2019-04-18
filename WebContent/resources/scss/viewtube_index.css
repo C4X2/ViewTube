@@ -21,7 +21,12 @@ RULES FOR ELEMENTS
 RULES FOR CLASSES
 ============================================================================
 */
-
+.vt-main {
+	background-color : grey;
+	text-align : center;
+	backgrouns-image : linear-gradient(grey, black);
+	
+}
 
 /*
 -----------------------------------------------------------------------------

@@ -8,15 +8,21 @@
 <body>
     <!-- The banner at the top of the webpage  -->
 	<div class="vt-ribbon-home">
-	    <a class="vt-ribbon-viewtube" href="#">ViewTube</a>
-	    <a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a>
-		<input class="vt-ribbon-input" type="search">
-		<button class="vt-ribbon-button">Search</button>
-		<a class = "vt-ribbon-personal" ><img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png" height="50" width ="50"></a>
-		<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
+		<ul class="vt-ribbon-list">
+	    	<li class="vt-ribbon-list-elem"><a class="vt-ribbon-viewtube" href="#">ViewTube</a></li>
+	    	<li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
+			<li class="vt-ribbon-list-elem"><input class="vt-ribbon-input" type="search"></li>
+			<li class="vt-ribbon-list-elem"><button class="vt-ribbon-button">Search</button></li>
+			<li class="vt-ribbon-list-elem">
+				<a class = "vt-ribbon-personal" >
+					<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
+				</a>
+			</li>
+			<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
+		</ul>
 	</div>
-	
-	<div style="text-align: center">
+
+	<div class="vt-main">
 		<h2>
 			Welcome to ViewTube
 			<br><br>
@@ -34,6 +40,9 @@
 		<h3>
 			<a href="contactus.html">Click here to navigate to the Contact Us Page</a>
 		</h3>
+	</div>
+	
+	<div class="vt-bottom-ribbon">
 	</div>
 </body>
 </html>
