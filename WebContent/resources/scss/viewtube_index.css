@@ -24,7 +24,7 @@ RULES FOR CLASSES
 .vt-main {
 	background-color : grey;
 	text-align : center;
-	backgrouns-image : linear-gradient(grey, black);
+	background-image: linear-gradient(#F0FFFF, #808080, #666666,black);
 	
 }
 
