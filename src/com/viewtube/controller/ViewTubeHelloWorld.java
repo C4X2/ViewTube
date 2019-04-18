@@ -49,5 +49,17 @@ public class ViewTubeHelloWorld {
 		
 	}
 	
+	@RequestMapping(path = "/developer", method = RequestMethod.GET)
+	public ModelAndView developer(ModelAndView mvc) {
+		String html = "<p>If you are interested in developing an application that works with ViewTube, "
+				+ "you can find our code and APIs on <a href='https://github.com/'>github</a></p>";
+		
+		mvc.addObject("developer", html);
+		mvc.setViewName("contactus");
+		contactus(mvc.getModelMap());
+		System.out.println(mvc.getViewName());
+		return mvc;
+	}
+	
 	
 }
