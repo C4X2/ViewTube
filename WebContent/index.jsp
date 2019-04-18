@@ -32,17 +32,14 @@
 			<br><br>
 		</h3>
 		<h3>
-			<a href="about.html">Click here to navigate to the About Page</a>
-		</h3>
-		<h3>
 			<a href="subscriptions.html">Click here to navigate to the Subscriptions Page</a>
-		</h3>
-		<h3>
-			<a href="contactus.html">Click here to navigate to the Contact Us Page</a>
 		</h3>
 	</div>
 	
 	<div class="vt-bottom-ribbon">
+		<a href="about.html">About</a>
+		<a href="contactus.html">Contact Us</a>
+		<a href="developer.html">Developers</a>
 	</div>
 </body>
 </html>
