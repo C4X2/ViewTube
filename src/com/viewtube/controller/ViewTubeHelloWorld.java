@@ -1,7 +1,9 @@
 package com.viewtube.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
  
 /**
@@ -11,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
  
 @Controller
 public class ViewTubeHelloWorld {
+	
 	@RequestMapping("/welcome")
 	public ModelAndView helloWorld() {
  
@@ -35,11 +38,14 @@ public class ViewTubeHelloWorld {
 		
 	}
 	
-	@RequestMapping(path = "/contactus")
-	public ModelAndView contactus() {
-		String message = "<br><div style='text-align:center;'>"
-				+ "<h3>********** Hello World, Spring MVC Tutorial</h3>This message is coming from CrunchifyHelloWorld.java **********</div><br><br>";
-		return new ModelAndView("contactus","contactus",message);
+	@RequestMapping(path = "/contactus", method= RequestMethod.GET)
+	public ModelMap contactus(ModelMap map) {
+		String attribute = "contactus";
+		String message = "Feel free to contact us!";
+		
+		map.addAttribute(attribute, message);
+		
+		return map;
 		
 	}
 	
