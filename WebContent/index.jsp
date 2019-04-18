@@ -2,6 +2,7 @@
 <head>
 <title>ViewTube</title>
 <link rel="stylesheet" href="resources/scss/viewtube.css"/>
+<link rel="stylesheet" href="resources/scss/viewtube_index.css"/>
 <script src = "resources/js/viewtube.js"></script>
 </head>
 <body>
@@ -11,7 +12,7 @@
 	    <a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a>
 		<input class="vt-ribbon-input" type="search">
 		<button class="vt-ribbon-button">Search</button>
-		<a class = "vt-ribbon-personal" ><img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png" height="500" width ="500"></a>
+		<a class = "vt-ribbon-personal" ><img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png" height="50" width ="50"></a>
 		<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
 	</div>
 	
