@@ -1,5 +1,7 @@
 package com.viewtube.controller;
 
+import com.viewtube.mongodb.*;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +18,7 @@ public class ViewTubeHelloWorld {
 	
 	@RequestMapping("/welcome")
 	public ModelAndView helloWorld() {
- 
+		JavaMongoDBConnection jmdbc = new JavaMongoDBConnection();
 		String message = "<br><div style='text-align:center;'>"
 				+ "<h3>********** Hello World, Spring MVC Tutorial</h3>This message is coming from CrunchifyHelloWorld.java **********</div><br><br>";
 		return new ModelAndView("welcome", "message", message);
