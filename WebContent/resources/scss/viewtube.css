@@ -78,7 +78,7 @@ RULES FOR CLASSES
 	width    : 100%;
 	max-height   : 48px;
 	border   : 2px;
-	background-image : linear-gradient(#F0FFFF, #808080, #666666, black);
+	/*background-image : linear-gradient(#F0FFFF, #808080, #666666, black);*/
 }
 .vt-bottom-ribbon-list {
 	list-style-type : none;

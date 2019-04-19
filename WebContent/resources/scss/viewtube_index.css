@@ -2,7 +2,10 @@
 /*
 RULES FOR THE VIEWTUBE INDEX/ LANDING PAGE
 */
-@charset "ISO-8859-1";
+* {
+	background       :#475d62 url(https://raw.githubusercontent.com/bootstrapstudio/dark-login-form-bootstrap-snippet/master/assets/img/star-sky.jpg);
+    
+}
 /*
 ============================================================================
 RULE FOR GRADIANT VIEW
@@ -27,11 +30,15 @@ RULES FOR CLASSES
 	MAX-HEIGHT       : 1080px;
 	MIN-HEIGHT       : 360px;
 	MAX-WIDTH        : 100%;
-	bottom           : 0;
+	background       :#475d62 url(https://raw.githubusercontent.com/bootstrapstudio/dark-login-form-bootstrap-snippet/master/assets/img/star-sky.jpg);
+    background-size  :cover;
+    position:relative;
+}
+/*
 	background-image : linear-gradient(#F0FFFF, #808080, #666666, black);
 
 }
-
+*/
 /*
 -----------------------------------------------------------------------------
 ID LEVEL RULES
