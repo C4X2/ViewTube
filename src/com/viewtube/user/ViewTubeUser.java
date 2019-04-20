@@ -1,5 +1,7 @@
 package com.viewtube.user;
 
+import com.viewtube.content.*;
+
 import java.awt.Image;
 import java.time.Instant;
 
