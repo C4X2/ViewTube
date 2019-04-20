@@ -1,9 +1,10 @@
 package com.viewtube.user;
 
 import java.awt.Image;
+import java.time.Instant;
 
 
-public class ViewTubeUser {
+public abstract class ViewTubeUser {
 	
 	// A user's login in information
 	private String username;
@@ -16,6 +17,18 @@ public class ViewTubeUser {
 	
 	// Personalized icon
 	private Image icon;
+	
+	//User email
+	private String email;
+	
+	//The language in which the user speaker/reads
+	private String language;
+	
+	//The user credit card information
+	private PaymentInfo pmnt;
+	
+	//Date the user first signed up for ViewTube
+	private long date;
 	
 	public ViewTubeUser() { }
 	
@@ -57,5 +70,43 @@ public class ViewTubeUser {
 	
 	public void setIcon(Image icon) {
 		this.icon = icon;
+	}
+	
+	public String getEmail () {
+		return this.email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public String getLangauge() {
+		return this.language;
+	}
+	
+	public void setLangauge(String lang) {
+		this.language = lang;
+	}
+	
+	public void setPmnt(PaymentInfo info) {
+		this.pmnt = info;
+	}
+	
+	public PaymentInfo getPmnt() {
+		return this.pmnt;
+	}
+	
+	public void setDate (Long date) {
+		long temp = Instant.now().getEpochSecond();
+		if (temp - date > 10000) {
+			this.date = temp;
+		}
+		else {
+			this. date = date;
+		}
+	}
+	
+	public Long getDate() {
+		return this.date;
 	}
 }
