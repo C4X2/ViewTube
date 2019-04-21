@@ -23,7 +23,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="vt-ribbon-viewtube" href="#">ViewTube</a>
+                <a class="vt-ribbon-viewtube" href="/">ViewTube</a>
             </div>
             <ul class="vt-ribbon-list nav navbar-nav">
                 <li class="vt-ribbon-list-elem col-md-1"></li>
