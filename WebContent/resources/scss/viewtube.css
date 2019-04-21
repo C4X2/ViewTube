@@ -39,9 +39,11 @@ RULES FOR CLASSES
 }
 .vt-ribbon-list-elem {
 	display       : inline-block;
+	/*
 	right-padding : 20px;
 	left-padding  : 20px;
 	max-width     : 376 px;
+	*/
 }
 .vt-ribbon-viewtube {
 	text-decoration : none;

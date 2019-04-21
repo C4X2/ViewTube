@@ -32,7 +32,7 @@ RULES FOR CLASSES
 	MAX-WIDTH        : 100%;
 	background       :#475d62 url(https://raw.githubusercontent.com/bootstrapstudio/dark-login-form-bootstrap-snippet/master/assets/img/star-sky.jpg);
     background-size  :cover;
-    position:relative;
+    position         :relative;
 }
 /*
 	background-image : linear-gradient(#F0FFFF, #808080, #666666, black);
