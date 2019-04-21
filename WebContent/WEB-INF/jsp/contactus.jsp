@@ -14,13 +14,12 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     
+    <link rel="stylesheet" href="resources/scss/viewtube.css" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<h1>
-		Contact Us!
-	</h1>
-	    <!-- The banner at the top of the webpage  -->
+    <!-- The banner at the top of the webpage  -->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -49,9 +48,40 @@
             </ul>
         </div>
     </nav>
+	<h1>
+		Contact Us!
+	</h1>
 	<div>
 	${developer}
 	</div>
+	<div>
 	${contactus}
+	</div>
+	<h2>Leave us a message</h2>
+	<form class="form-horizontal" action="/action_page.php">
+    <div class="form-group ">
+    <div class="float-right col-md-6">
+      <label for="firstName" class="control-label  float-right">First Name:</label>
+      </div>
+      <div class="float-right col-md-6">
+      <label for="lastName" class="control-label  float-right">Last Name:</label>
+      </div>
+      <div class="col-md-6">
+          <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" name="firstName">
+      </div>
+      <div class="col-md-6">
+          <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" name="lastName">
+      </div>
+    </div>
+    <div class="form-group col-md-12">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group form-group-lg col-md-12">
+      <label for="message">Message:</label>
+      <textarea rows="3" class="form-control input-lg" id="message" name="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 </body>
 </html>
