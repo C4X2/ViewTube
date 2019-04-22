@@ -26,7 +26,7 @@
                 <a class="vt-ribbon-viewtube" href="/ViewTube/#index">ViewTube</a>
             </div>
             <ul class="vt-ribbon-list nav navbar-nav">
-                <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
+                <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href="login.html"><img alt="Random Video" src="resources/img/dice.png"></a></li>
             </ul>
             <form class="navbar-form navbar-left form-inline" action="">
                 <div class="input-group row">
@@ -38,7 +38,7 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="vt-ribbon-list-elem">
-                    <a class="vt-ribbon-personal">
+                    <a class="vt-ribbon-personal" href="login.html">
 						<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
 				    	<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
 				    </a>

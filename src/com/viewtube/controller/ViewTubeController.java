@@ -17,5 +17,11 @@ public class ViewTubeController {
 		view.setViewName("/ViewTube/#index");
 		return view;
 	}
+	
+	@RequestMapping(path = "/login", method = RequestMethod.GET)
+	public ModelAndView viewTubeLoginPath(ModelAndView view) {
+		
+		return view;
+	}
 
 }
