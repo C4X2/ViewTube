@@ -25,8 +25,8 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	private MongoDatabase mongodb;
 	
 	public JavaMongoDBConnection () {
-		if (mgcl ==null) {
-		 mgcl = MongoClients.create(MongoDBConnection.CONNECTION);
+		if (mgcl == null) {
+		   mgcl = MongoClients.create(MongoDBConnection.CONNECTION);
 		}
 		
 		if (mongodb == null) {

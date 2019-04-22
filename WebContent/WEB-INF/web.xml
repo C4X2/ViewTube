@@ -26,6 +26,6 @@
     <url-pattern>*.html</url-pattern>
   </servlet-mapping>
   <error-page>
-    <location>/generalerror.jsp</location>
+    <location>/generalerror.jsp/</location>
   </error-page>
 </web-app>

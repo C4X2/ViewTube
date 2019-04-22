@@ -23,27 +23,25 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="vt-ribbon-viewtube" href="">ViewTube</a>
+                <a class="vt-ribbon-viewtube" href="/ViewTube/#index">ViewTube</a>
             </div>
             <ul class="vt-ribbon-list nav navbar-nav">
-                <li class="vt-ribbon-list-elem col-md-1"></li>
-                <li class="vt-ribbon-list-elem col-md-2"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
+                <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
             </ul>
             <form class="navbar-form navbar-left form-inline" action="">
-                <div class="input-group">
-                    <input class="vt-ribbon-input form-control" type="search" placeholder="Search...">
+                <div class="input-group row">
+                    <input class="form-control" type="text" placeholder="Search...">
                     <div class="input-group-btn">
-
-                        <button class="vt-ribbon-button btn btn-info "><span class="glyphicon glyphicon-search"></span>Search</button>
+                        <button class="vt-ribbon-button btn btn-info"><span class="glyphicon glyphicon-search"></span>Search</button>
                     </div>
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="vt-ribbon-list-elem">
                     <a class="vt-ribbon-personal">
-					<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
-				    <!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
-				</a>
+						<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
+				    	<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
+				    </a>
                 </li>
             </ul>
         </div>
