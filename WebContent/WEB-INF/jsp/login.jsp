@@ -20,18 +20,34 @@
 
 </head>
 <body>
+<div class="justify-content-center">
 	<div class="container-fluid">
 		<div class="card">
 			<form action="">
 				<div class="input-group">
-					<input placeholder="Email or Username">
+					<label class="text-muted" for="useremail">Email or Username</label>
+					<input class="form-control" placeholder="Email or Username" type="text" required id="useremail" name="useremail">
 				</div>
-				<div class="input-group">
-					<input placeholder="Password">
+				<div class="form-group">
+					<div class="input-group">
+						<label class="text-muted" for="userpassword">Password</label>
+						<input class="form-control" placeholder="Password" type="password" id = "userpassword" name="userpassword" required>
+					</div>
 				</div>
-				<button class="btn btn-danger"></button>
+				<div class="form-group row">
+					<label>
+						<input type="checkbox" name="remember" class="form-control"> Remember me
+					</label>
+				</div>
+				<button class="btn btn-info" type="submit">Login</button>
+				  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+    <label>Or Sign Up</label>
+  </div>
 			</form>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
