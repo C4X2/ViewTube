@@ -17,9 +17,6 @@ RULE FOR GRADIANT VIEW
 RULES FOR ELEMENTS
 ===========================================================================
 */
-body {
-	:#475d62 url(https://raw.githubusercontent.com/bootstrapstudio/dark-login-form-bootstrap-snippet/master/assets/img/star-sky.jpg);
-}
 
 /*
 ============================================================================
@@ -27,12 +24,16 @@ RULES FOR CLASSES
 ============================================================================
 */
 .vt-main {
+	/*
 	background-color : grey;
+	*/
 	text-align       : center;
 	MAX-HEIGHT       : 1080px;
 	MIN-HEIGHT       : 360px;
 	MAX-WIDTH        : 100%;
+	/*
 	background       :#475d62 url(https://raw.githubusercontent.com/bootstrapstudio/dark-login-form-bootstrap-snippet/master/assets/img/star-sky.jpg);
+    */
     background-size  :cover;
     position         :relative;
 }
