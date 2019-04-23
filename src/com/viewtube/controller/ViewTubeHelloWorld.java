@@ -49,7 +49,6 @@ public class ViewTubeHelloWorld {
 		String message = "Feel free to contact us!";
 		
 		map.addAttribute(attribute, message);
-		
 		return map;
 		
 	}

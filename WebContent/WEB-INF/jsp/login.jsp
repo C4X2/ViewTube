@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style type="text/css">
+		form {border: 3px solid #f1f1f1;}
+		.border-hoarder {border: 3px solid #f1f1f1;}
+	</style>
 	<meta charset="ISO-8859-1">
 	<title>ViewTube</title>
     <link rel="stylesheet" href="resources/scss/viewtube.css" />
@@ -25,13 +29,13 @@
 <body>
 <div class="justify-content-center">
 	<div class="container-fluid">
-		<div class="card">
+		<div class="card" style="max-width : 400px">
 			<div class="card-header">
-				<h2 class="bg-primary text-white">Login</h2>
+				<h2 class="bg-primary card-title text-white">${login} ${signup}</h2>
 			</div>
 			<div class="card-body">
 				<form action="">
-					<div class="input-group">
+					<div class="form-group">
 						<label class="text-muted" for="useremail">Email or Username</label>
 						<input class="form-control" placeholder="Email or Username" type="text" required id="useremail" name="useremail">
 					</div>
@@ -42,21 +46,22 @@
 						</div>
 					</div>
 					<div class="form-group row form-inline">
-						<input type="checkbox" name="remember" class="form-control">
-						<label class="text-muted">Remember Me</label>
+						<div class="form-check">
+							<input type="checkbox" name="remember" class="form-check-input">
+							<label class="text-muted form-check-label">Remember Me</label>
+						</div>
 					</div>
 					<div class="form-group row">
-						<button class="btn btn-danger" type="button" action="">Cancel</button>
-						<button class="btn btn-info" type="submit">Login</button>
+						<button class="btn btn-danger" type="button" onclick="">Cancel</button>
+						<button class="btn btn-info float-right" type="submit">${login} ${signup}</button>
 					</div>
-					<div class="form-group">
-    					<a href="#">Forgot password?</a>
-    					<a href="">Or Sign Up</a>
-  					</div>
 				</form>
 			</div>
 			<div class="card-footer">
-				Hello!
+				<div class="border-hoarder">
+    				<a class="card-link" href="#">Forgot password?</a>
+    				<a class="card-link" href="signup.html">Or Sign Up</a>
+  				</div>
 			</div>
 		</div>
 	</div>
