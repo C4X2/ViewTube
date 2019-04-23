@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,20 +36,20 @@
 				<h2 class="bg-primary card-title text-white">${login} ${signup}</h2>
 			</div>
 			<div class="card-body">
-				<form action="">
+				<form method="POST" action="loginattempt.html">
 					<div class="form-group">
 						<label class="text-muted" for="useremail">Email or Username</label>
-						<input class="form-control" placeholder="Email or Username" type="text" required id="useremail" name="useremail">
+						<input class="form-control" placeholder="Email or Username" type="text" required id="username" name="username">
 					</div>
 					<div class="form-group">
 						<div class="input-group">
 							<label class="text-muted" for="userpassword">Password</label>
-							<input class="form-control" placeholder="Password" type="password" id = "userpassword" name="userpassword" required>
+							<input class="form-control" placeholder="Password" type="password" id = "password" name="password" required>
 						</div>
 					</div>
 					<div class="form-group row form-inline">
 						<div class="form-check">
-							<input type="checkbox" name="remember" class="form-check-input">
+							<input type="checkbox" id="remember" name="remember" class="form-check-input">
 							<label class="text-muted form-check-label">Remember Me</label>
 						</div>
 					</div>
