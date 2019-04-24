@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="resources/scss/viewtube.css" />
     <link rel="stylesheet" href="resources/scss/viewtube_index.css" />
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -23,16 +24,17 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="vt-ribbon-viewtube" href="/ViewTube/#index">ViewTube</a>
+                <a class="vt-ribbon-viewtube navbar-brand" href="/ViewTube/#index">ViewTube</a>
             </div>
             <ul class="vt-ribbon-list nav navbar-nav">
-                <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href="login.html"><img alt="Random Video" src="resources/img/dice.png"></a></li>
+                <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
+            	<!-- I want this to act as a wildcard and show a random video -->
             </ul>
             <form class="navbar-form navbar-left form-inline" action="">
                 <div class="input-group row">
-                    <input class="form-control" type="text" placeholder="Search...">
+                    <input class="form-control mx-5" type="text" placeholder="Search..." style="min-width : 376px; max-width : 500px">
                     <div class="input-group-btn">
-                        <button class="vt-ribbon-button btn btn-info"><span class="glyphicon glyphicon-search"></span>Search</button>
+                        <button class="vt-ribbon-button btn btn-outline-info" type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
                     </div>
                 </div>
             </form>
