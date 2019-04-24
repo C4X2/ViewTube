@@ -1,6 +1,7 @@
 package com.viewtube.mongodb;
 
 import com.viewtube.user.ViewTubeUser;
+import com.viewtube.user.ViewTubeViewer;
 import com.viewtube.content.*;
 
 /**
@@ -13,18 +14,33 @@ import com.viewtube.content.*;
  */
 public class DBService {
 	
-	private JavaMongoDBConnection jmdbc;
+	private static JavaMongoDBConnection jmdbc;
 	
 	/**
 	 * Adds a viewTubeObject to the appropriate collection present in the MongoDB database.
 	 * @param viewtubeObject
 	 */
 	public static void create(Object viewtubeObject ) {
+		System.out.println("Entering create method in DBService class");
 		createhelper(viewtubeObject);
 	}
 	private static void createhelper(Object viewtubeObject) {
+		System.out.println("Entering submethod in DBService class");
+		System.out.println("Establishing connection to JavaMongoDBConnection class");
+		jmdbc = new JavaMongoDBConnection();
+		System.out.println("Sucessfully connected to JavaMongoDBConnection class");
+		
+		System.out.println("Comparing obejct to known classes");
 		if (viewtubeObject instanceof ViewTubeUser) {
-			
+			System.out.println("known ViewTubeViewer correctly identified");
+			try {
+				System.out.println("Attempting to add user to the database");
+				jmdbc.addViewTubeViewer((ViewTubeViewer)viewtubeObject);
+			} catch (DatabaseConflictException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Erorr Error Error");
+				e.printStackTrace();
+			}
 		}
 		else if (viewtubeObject instanceof Video) {
 			
@@ -39,9 +55,9 @@ public class DBService {
 			
 		}
 		else {
-			//TODO This means that the passed obejct is not a relevant type to save in our database so we can ignore it
+			//TODO This means that the passed object is not a relevant type to save in our database so we can ignore it
 		}
-		
+		jmdbc.close();
 	}
 	/**
 	 * Saves the new attributes of the object to the database. Updates the appropriate fields
@@ -80,4 +96,5 @@ public class DBService {
 	public static void overwrite(Object oldObject, Object newObject) {
 		
 	}
+
 }

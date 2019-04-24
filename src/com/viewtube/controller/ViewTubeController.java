@@ -46,7 +46,7 @@ public class ViewTubeController {
 		System.out.println(vtvw.getPassword());
 		mav.addObject("viewtuber", vtvw);
 		//Add Validation logic here
-		
+		DBService.create(vtvw);
 		//if vtvw was found in the database return to the index page
 		//else return to the login page and complain
 		return "login";

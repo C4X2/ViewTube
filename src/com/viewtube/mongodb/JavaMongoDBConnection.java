@@ -39,11 +39,15 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	
 	public JavaMongoDBConnection () {
 		if (mgcl == null) {
-		   mgcl = MongoClients.create(MongoDBConnection.CONNECTION);
+			System.out.println("Creating connection to database cluster");
+		    mgcl = MongoClients.create(MongoDBConnection.CONNECTION);
+			System.out.println("Sucessfully connected to database cluster");
 		}
 		
 		if (mongodb == null) {
+			System.out.println("Connecting to database");
 			mongodb = mgcl.getDatabase(MongoDBConnection.DATABASE_NAME);
+			System.out.println("Sucessfully connected to database");
 		}
 		
 	}
@@ -54,12 +58,22 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	 * @return true, if ViewTubeViewer was successfully added to the database, false if the user was not successfully added.
 	 */
 	public boolean addViewTubeViewer(ViewTubeViewer vtvw) throws DatabaseConflictException {
+		System.out.println("Entered addViewTubeViewer method");
+		System.out.println("Accessing Viewer collection");
 		MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_VIEWER);
+		System.out.println("Sucessfully accessed Viewer collection");
+		System.out.println("Aggregating Documents from Viewer collection");
 		FindIterable<Document> iterDoc = collection.find();
-		Iterator it = iterDoc.iterator();
+		System.out.println("Sucessfully aggregated Documents from Viewer collection");
+		Iterator<Document> it = iterDoc.iterator();
+		if (it == null) {
+			System.out.println("Your iterator aint shit");
+		}
 		while (it.hasNext()) {
+			System.out.println("iterator operation:");
 			System.out.println(it.next());
 		}
+
 		return false;
 	}
 	
@@ -83,5 +97,13 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 			return vtu.getId();
 		}
 		return null;
+	}
+	
+	/**
+	 * Close the client, which will close all underlying cached resources, 
+	 * including, for example,sockets and background monitoring threads. It is consider best practice to close a database connection once all operations on that database is complete.
+	 */
+	public void close() {
+		mgcl.close();
 	}
 }
