@@ -2,14 +2,19 @@ package com.viewtube.mongodb;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.client.MongoClients;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.ServerAddress;
 
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import com.mongodb.client.MongoCollection;
 
+import org.bson.BSON;
 import org.bson.Document;
 import java.util.Arrays;
+import java.util.Iterator;
+
 import com.mongodb.Block;
 
 import com.mongodb.client.MongoCursor;
@@ -17,6 +22,7 @@ import static com.mongodb.client.model.Filters.*;
 import com.mongodb.client.result.DeleteResult;
 import static com.mongodb.client.model.Updates.*;
 import com.mongodb.client.result.UpdateResult;
+import com.viewtube.user.ViewTubeUser;
 import com.viewtube.user.ViewTubeViewer;
 
 import java.util.ArrayList;
@@ -49,14 +55,33 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	 */
 	public boolean addViewTubeViewer(ViewTubeViewer vtvw) throws DatabaseConflictException {
 		MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_VIEWER);
-		collection.
+		FindIterable<Document> iterDoc = collection.find();
+		Iterator it = iterDoc.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
+		return false;
 	}
 	
-	public void trythings() {
-		MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_NAME);
-		Document document = new Document("name", "Nate").append("last", "brown");
-		collection.insertOne(document);
-		System.out.println(collection.countDocuments());
-		
+	
+	/**
+	 * Creates and returns a special ID string for each ViewTube Object.
+	 * @param viewtubeObject an Object which is either derived of type ViewTubeUser, a comment, a CommentChain, PaymentInfo or a Video.
+	 * @return a string representing the unique ID of the user
+	 */
+	private String uniqueViewTubeID(Object viewtubeObject) {
+		if (viewtubeObject instanceof ViewTubeUser) {
+			ViewTubeUser vtu = (ViewTubeUser) viewtubeObject;
+			if (vtu.getId().isBlank() || vtu.getId() == null) {
+				for (int i = 0; i <= vtu.getUsername().length(); i++) {
+					vtu.setId(vtu.getUsername().charAt(i) + "mog" + vtu.getUsername().charAt(vtu.getUsername().length() - i) + i + vtu.getId());
+				}
+				for (int i = 0; i <= vtu.getPassword().length(); i++) {
+					vtu.setId("mog" + vtu.getPassword().charAt(vtu.getPassword().length() - i) + i + vtu.getId());
+				}
+			}
+			return vtu.getId();
+		}
+		return null;
 	}
 }
