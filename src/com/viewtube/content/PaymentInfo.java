@@ -1,4 +1,4 @@
-package com.viewtube.user;
+package com.viewtube.content;
 
 /**
  * A class created to handle the payment information of any user of the ViewTube system.

@@ -65,14 +65,8 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 		System.out.println("Aggregating Documents from Viewer collection");
 		FindIterable<Document> iterDoc = collection.find();
 		System.out.println("Sucessfully aggregated Documents from Viewer collection");
-		Iterator<Document> it = iterDoc.iterator();
-		if (it == null) {
-			System.out.println("Your iterator aint shit");
-		}
-		while (it.hasNext()) {
-			System.out.println("iterator operation:");
-			System.out.println(it.next());
-		}
+		FindIterable<Document> iterDoc2=  iterDoc.filter(Filters.eq("_id", uniqueViewTubeID(vtvw)));
+		System.out.println(iterDoc2);
 
 		return false;
 	}
@@ -83,17 +77,18 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	 * @param viewtubeObject an Object which is either derived of type ViewTubeUser, a comment, a CommentChain, PaymentInfo or a Video.
 	 * @return a string representing the unique ID of the user
 	 */
-	private String uniqueViewTubeID(Object viewtubeObject) {
+	public String uniqueViewTubeID(Object viewtubeObject) {
 		if (viewtubeObject instanceof ViewTubeUser) {
 			ViewTubeUser vtu = (ViewTubeUser) viewtubeObject;
-			if (vtu.getId().isBlank() || vtu.getId() == null) {
-				for (int i = 0; i <= vtu.getUsername().length(); i++) {
-					vtu.setId(vtu.getUsername().charAt(i) + "mog" + vtu.getUsername().charAt(vtu.getUsername().length() - i) + i + vtu.getId());
+			if (/*vtu.getId().isBlank() ||*/ vtu.getId() == null) {
+				for (int i = 0; i < vtu.getUsername().length(); i++) {
+					vtu.setId(vtu.getUsername().charAt(i) + "mog" + vtu.getUsername().charAt(vtu.getUsername().length() - i - 1) + i + vtu.getId());
 				}
-				for (int i = 0; i <= vtu.getPassword().length(); i++) {
-					vtu.setId("mog" + vtu.getPassword().charAt(vtu.getPassword().length() - i) + i + vtu.getId());
+				for (int i = 0; i < vtu.getPassword().length(); i++) {
+					vtu.setId("mog" + vtu.getPassword().charAt(vtu.getPassword().length() - i - 1) + i + vtu.getId());
 				}
 			}
+			vtu.setId(vtu.getId().substring(0, vtu.getId().length() - 4));
 			return vtu.getId();
 		}
 		return null;
