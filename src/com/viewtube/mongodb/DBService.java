@@ -16,7 +16,8 @@ public class DBService {
 	private JavaMongoDBConnection jmdbc;
 	
 	/**
-	 * 
+	 * Adds a viewTubeObject to the appropriate collection present in the MongoDB database.
+	 * @param viewtubeObject
 	 */
 	public static void create(Object viewtubeObject ) {
 		createhelper(viewtubeObject);
@@ -43,7 +44,7 @@ public class DBService {
 		
 	}
 	/**
-	 * Saves the new attributes of the object to the datbase
+	 * Saves the new attributes of the object to the database. Updates the appropriate fields
 	 * @param viewtubeObject
 	 */
 	public static void save(Object viewtubeObject) {

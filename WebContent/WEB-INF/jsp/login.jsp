@@ -66,6 +66,9 @@
   				</div>
 			</div>
 		</div>
+		<div>
+			<p>TODO: NAVIGATE TO THE ADVERTISOR LOGIN, NAVIGATE TO THE CREATOR PAGE, NAVIGATE TO THE CURATPR/MODERATOR PAGE?</p>
+		</div>
 	</div>
 	</div>
 </body>
