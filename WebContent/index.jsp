@@ -30,11 +30,11 @@
                 <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
             	<!-- I want this to act as a wildcard and show a random video -->
             </ul>
-            <form class="navbar-form navbar-left form-inline" action="">
+            <form class="ml-3 my-auto d-inline w-100 navbar-form navbar-left form-inline" action="">
                 <div class="input-group row">
-                    <input class="form-control mx-5" type="text" placeholder="Search..." style="min-width : 376px; max-width : 500px">
+                    <input class="form-control border-right-0" type="text" placeholder="Search..." style="min-width : 376px; max-width : 5000px">
                     <div class="input-group-btn">
-                        <button class="vt-ribbon-button btn btn-outline-info" type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
+                        <button class="vt-ribbon-button btn btn-outline-info border-left-0" type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
                     </div>
                 </div>
             </form>
@@ -68,6 +68,8 @@
             <li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href="about.html">About</a></li>
             <li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href="contactus.html">Contact Us</a></li>
             <li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href="developer.html">Developers</a></li>
+            <li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href=""><i class="fa fa-twitter"></i></a></li>
+            <li class="vt-bottom-ribbon-list-elem"><a class="vt-bottom-ribbon-link" href=""><i class="fa fa-github"></i></a></li>
         </ul>
     </div>
 </body>
