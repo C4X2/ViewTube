@@ -1,6 +1,9 @@
 # ignoring complied information
 target
 
+# Eclipse settings
+.settings
+
 # Compiled class file
 *.class
 
