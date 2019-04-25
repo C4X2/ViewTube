@@ -58,19 +58,36 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	 * @return true, if ViewTubeViewer was successfully added to the database, false if the user was not successfully added.
 	 */
 	public boolean addViewTubeViewer(ViewTubeViewer vtvw) throws DatabaseConflictException {
+		//Try to find an instance of the user, to see if they already signed up for the service
+		if(findViewTubeViewer(vtvw) == null) { // If not findViewTubeViewer will return null
+			// Create new Document and inserts it into the database
+			MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_VIEWER);
+			collection.insertOne(new Document().append("_id", uniqueViewTubeID(vtvw))
+					.append("username", vtvw.getUsername())
+					.append("password", vtvw.getPassword()));
+			return true;
+		}
+		// otherwise throw an exception because the individual is already signed up for the service
+		throw new DatabaseConflictException();
+	}
+	/**
+	 * Finds the first instance of the matching id element for a ViewTubeViewer in the database.
+	 * @param vtvw a ViewTubeViewer object, and user of the service.
+	 * @return the document containing all the information about the specific ViewTubeViewer.
+	 */
+	public Document findViewTubeViewer(ViewTubeViewer vtvw) {
 		System.out.println("Entered addViewTubeViewer method");
 		System.out.println("Accessing Viewer collection");
 		MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_VIEWER);
 		System.out.println("Sucessfully accessed Viewer collection");
 		System.out.println("Aggregating Documents from Viewer collection");
 		FindIterable<Document> iterDoc = collection.find();
+		System.out.println(iterDoc.first());
 		System.out.println("Sucessfully aggregated Documents from Viewer collection");
 		FindIterable<Document> iterDoc2=  iterDoc.filter(Filters.eq("_id", uniqueViewTubeID(vtvw)));
-		System.out.println(iterDoc2);
-
-		return false;
+		System.out.println(iterDoc2.first());
+		return iterDoc2.first();
 	}
-	
 	
 	/**
 	 * Creates and returns a special ID string for each ViewTube Object.
