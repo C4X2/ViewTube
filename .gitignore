@@ -4,6 +4,10 @@ target
 # Eclipse settings
 .settings
 
+#Eclipse build specifications
+.classpath
+.project
+
 # Compiled class file
 *.class
 
