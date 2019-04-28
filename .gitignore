@@ -1,5 +1,6 @@
 # ignoring complied information
 target/*
+bin/*
 
 # Eclipse settings
 .settings
