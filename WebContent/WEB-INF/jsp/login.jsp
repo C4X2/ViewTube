@@ -29,45 +29,48 @@
 
 </head>
 <body>
-<div class="justify-content-center">
+<div class="login-spacing"></div>
+<div class="mx-auto login-container">
 	<div class="container-fluid">
-		<div class="card" style="max-width : 400px">
+		<div class="card login-card">
 			<div class="card-header">
-				<h2 class="bg-primary card-title text-white">${login} ${signup}</h2>
+				<h2 class="bg-primary card-title text-white text-center">${login} ${signup}</h2>
 			</div>
 			<div class="card-body">
 				<form method="POST" action="loginattempt.html">
 					<div class="form-group">
 						<label class="text-muted" for="useremail">Email or Username</label>
-						<input class="form-control" placeholder="Email or Username" type="text" required id="username" name="username">
+						<input class="form-control" placeholder="Email or Username" type="text" id="username" name="username" required>
 					</div>
 					<div class="form-group">
-						<div class="input-group">
+						<div class="form-group">
 							<label class="text-muted" for="userpassword">Password</label>
-							<input class="form-control" placeholder="Password" type="password" id = "password" name="password" required>
+							<input class="form-control w-100" placeholder="Password" type="password" id = "password" name="password" required>
 						</div>
 					</div>
-					<div class="form-group row form-inline">
+					<div class="form-group form-inline">
 						<div class="form-check">
 							<input type="checkbox" id="remember" name="remember" class="form-check-input">
 							<label class="text-muted form-check-label">Remember Me</label>
 						</div>
 					</div>
-					<div class="form-group row">
-						<button class="btn btn-danger" type="button" onclick="">Cancel</button>
-						<button class="btn btn-info float-right" type="submit">${login} ${signup}</button>
+					<div class="form-group">
+						<a class="btn btn-danger" type="button" onclick="">Cancel</a>
+						<span class="text-right"><a class="btn btn-info text-right" type="submit">${login} ${signup}</a></span>
 					</div>
 				</form>
 			</div>
 			<div class="card-footer">
-				<div class="border-hoarder">
+				<div class="border-hoarder text-center">
     				<a class="card-link" href="#">Forgot password?</a>
     				<a class="card-link" href="signup.html">Or Sign Up</a>
   				</div>
+  				<div class="row text-center">
+  					<a class="card-link" href=''>Advertiser Login</a>
+  					<a class="card-link" href="">Creator Login</a>
+  					<a class="card-link" href="">Curator/Moderator Login</a>
+  				</div>
 			</div>
-		</div>
-		<div>
-			<p>TODO: NAVIGATE TO THE ADVERTISOR LOGIN, NAVIGATE TO THE CREATOR PAGE, NAVIGATE TO THE CURATPR/MODERATOR PAGE?</p>
 		</div>
 	</div>
 	</div>

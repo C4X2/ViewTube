@@ -1,5 +1,8 @@
 package com.viewtube.mongodb;
 
+import com.viewtube.user.ViewTubeAdvertiser;
+import com.viewtube.user.ViewTubeAdvertiser;
+import com.viewtube.user.ViewTubeDeveloper;
 import com.viewtube.user.ViewTubeUser;
 import com.viewtube.user.ViewTubeViewer;
 import com.viewtube.content.*;
@@ -31,19 +34,23 @@ public class DBService {
 		System.out.println("Sucessfully connected to JavaMongoDBConnection class");
 		
 		System.out.println("Comparing obejct to known classes");
+		try {
 		if (viewtubeObject instanceof ViewTubeUser) {
 			System.out.println("known ViewTubeViewer correctly identified");
-			try {
-				System.out.println("Attempting to add user to the database");
-				jmdbc.addViewTubeViewer((ViewTubeViewer)viewtubeObject);
-			} catch (DatabaseConflictException e) {
-				// TODO Auto-generated catch block
-				System.out.println("Erorr Error Error");
-				e.printStackTrace();
+			System.out.println("Attempting to add user to the database");
+			if (viewtubeObject instanceof ViewTubeDeveloper) {
+				jmdbc.addViewTubeUser((ViewTubeDeveloper)viewtubeObject, MongoDBConnection.COLLECTION_DEVELOPER);
+			}
+			else if (viewtubeObject instanceof ViewTubeAdvertiser) {
+				jmdbc.addViewTubeUser((ViewTubeAdvertiser)viewtubeObject, MongoDBConnection.COLLECTION_ADVERTISOR);
+			}
+			else {
+				
+				jmdbc.addViewTubeUser((ViewTubeViewer)viewtubeObject, MongoDBConnection.COLLECTION_VIEWER);
 			}
 		}
 		else if (viewtubeObject instanceof Video) {
-			
+
 		}
 		else if (viewtubeObject instanceof PaymentInfo) {
 			
@@ -57,6 +64,12 @@ public class DBService {
 		else {
 			//TODO This means that the passed object is not a relevant type to save in our database so we can ignore it
 		}
+		}
+		 catch (DatabaseConflictException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Erorr Error Error");
+				e.printStackTrace();
+			}
 		jmdbc.close();
 	}
 	/**
@@ -88,6 +101,7 @@ public class DBService {
 		
 	}
 	
+
 	/**
 	 * Overwrites the old object with the new object in the database. Importantly the unique ViewTubeID persists across objects.
 	 * @param oldObject an Object which is either derived of type ViewTubeUser, a comment, a CommentChain, PaymentInfo or a Video. The old entry into the database.

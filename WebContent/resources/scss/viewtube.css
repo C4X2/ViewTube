@@ -26,6 +26,7 @@ body {
 	*/
 }
 
+
 /*
 ============================================================================
 RULES FOR CLASSES
@@ -58,8 +59,7 @@ RULES FOR CLASSES
 	
 }
 .vt-ribbon-input {
-	max-width  : 376 px;
-	max-height : 36 px;
+
 }
 .vt-ribbon-button {
 	
@@ -96,6 +96,31 @@ RULES FOR CLASSES
 }
 .vt-bottom-ribbon-link {
 	text-decoration : none;
+}
+		/*
+		--------------------------------------------------------------------
+		RULES FOR LOGIN PAGES
+		--------------------------------------------------------------------
+		*/
+.login-card {
+	max-width : 400px;
+}
+.login-container {
+	justify-content: space-around;
+	align-items : center;
+	display : flex;
+}
+/* If the screen is less than 480px in height lower the spacing*/
+@media only screen and (max-height: 480px) {
+	.login-spacing {
+		height : 56px
+	}
+}
+/*If the screen in 681 px or greater in height increase the scaping*/
+@media only screen and (min-height : 481px) {
+	.login-spacing {
+		height : 110px
+	}
 }
 /*
 -----------------------------------------------------------------------------

@@ -10,7 +10,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.MongoCollection;
 
-import org.bson.BSON;
+
 import org.bson.Document;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -53,15 +53,15 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 	}
 	
 	/**
-	 * A method to add a new ViewTubeViewer to the MongoDB. Throws an exception if the user already exists in the database.
-	 * @param vtvw a ViewTubeViewer object.
-	 * @return true, if ViewTubeViewer was successfully added to the database, false if the user was not successfully added.
+	 * A method to add a new ViewTubeUser to the MongoDB. Throws an exception if the user already exists in the database.
+	 * @param vtvw a ViewTubeUser object.
+	 * @return true, if ViewTubeUser was successfully added to the database, false if the user was not successfully added.
 	 */
-	public boolean addViewTubeViewer(ViewTubeViewer vtvw) throws DatabaseConflictException {
+	public boolean addViewTubeUser(ViewTubeUser vtvw, String myCollection) throws DatabaseConflictException {
 		//Try to find an instance of the user, to see if they already signed up for the service
-		if(findViewTubeViewer(vtvw) == null) { // If not findViewTubeViewer will return null
+		if(findViewTubeViewer(vtvw, myCollection) == null) { // If not findViewTubeViewer will return null
 			// Create new Document and inserts it into the database
-			MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_VIEWER);
+			MongoCollection<Document> collection = mongodb.getCollection(myCollection);
 			collection.insertOne(new Document().append("_id", uniqueViewTubeID(vtvw))
 					.append("username", vtvw.getUsername())
 					.append("password", vtvw.getPassword()));
@@ -70,15 +70,25 @@ public class JavaMongoDBConnection implements MongoDBConnection {
 		// otherwise throw an exception because the individual is already signed up for the service
 		throw new DatabaseConflictException();
 	}
+	
+	/**
+	 * A method to add new content to the ViewTube ecosystem. Content is either a comment or a video.
+	 * @return
+	 */
+	public boolean addContent() {
+		
+		return true;
+	}
 	/**
 	 * Finds the first instance of the matching id element for a ViewTubeViewer in the database.
 	 * @param vtvw a ViewTubeViewer object, and user of the service.
+	 * @param myCollection the name of the collection that you want to find the user in
 	 * @return the document containing all the information about the specific ViewTubeViewer.
 	 */
-	public Document findViewTubeViewer(ViewTubeViewer vtvw) {
+	public Document findViewTubeViewer(ViewTubeUser vtvw, String myCollection) {
 		System.out.println("Entered addViewTubeViewer method");
 		System.out.println("Accessing Viewer collection");
-		MongoCollection<Document> collection = mongodb.getCollection(MongoDBConnection.COLLECTION_VIEWER);
+		MongoCollection<Document> collection = mongodb.getCollection(myCollection);
 		System.out.println("Sucessfully accessed Viewer collection");
 		System.out.println("Aggregating Documents from Viewer collection");
 		FindIterable<Document> iterDoc = collection.find();

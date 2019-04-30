@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.viewtube.content.Video;
 
-public class ViewTubeAdvertisor extends ViewTubeUser {
+public class ViewTubeAdvertiser extends ViewTubeUser {
 	/**
 	 * A parameter to determine whether or not an advertiser has been personally verified by ViewTube
 	 */

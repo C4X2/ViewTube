@@ -21,7 +21,7 @@
 
 <body>
     <!-- The banner at the top of the webpage  -->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar ">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="vt-ribbon-viewtube navbar-brand" href="/ViewTube/#index">ViewTube</a>
@@ -30,9 +30,9 @@
                 <li class="vt-ribbon-list-elem"><a class="vt-ribbon-random" href=""><img alt="Random Video" src="resources/img/dice.png"></a></li>
             	<!-- I want this to act as a wildcard and show a random video -->
             </ul>
-            <form class="ml-3 my-auto d-inline w-100 navbar-form navbar-left form-inline" action="">
+            <form class="my-auto d-inline w-100 navbar-form form-inline navbar-left" action="">
                 <div class="input-group row">
-                    <input class="form-control border-right-0" type="text" placeholder="Search..." style="min-width : 376px; max-width : 5000px">
+                    <input class="form-control border-right-0" type="text" placeholder="Search..." style="min-width : 376px; max-width : 5000px;">
                     <div class="input-group-btn">
                         <button class="vt-ribbon-button btn btn-outline-info border-left-0" type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
                     </div>
@@ -41,7 +41,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="vt-ribbon-list-elem">
                     <a class="vt-ribbon-personal" href="login.html">
-						<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
+						<img class = "vt-ribbon-icon navbar-brand" alt="profile_picutre" src="resources/img/loin.png">
 				    	<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
 				    </a>
                 </li>
