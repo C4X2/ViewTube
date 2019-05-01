@@ -46,11 +46,11 @@ RULES FOR CLASSES
 }
 .vt-ribbon-list-elem {
 	display       : inline-block;
-	/*
-	right-padding : 20px;
-	left-padding  : 20px;
-	max-width     : 376 px;
-	*/
+
+}
+.vt-search {
+	min-width : 35vw; 
+	max-width : 5000px;
 }
 .vt-ribbon-viewtube {
 	text-decoration : none;
@@ -59,6 +59,9 @@ RULES FOR CLASSES
 	
 }
 .vt-ribbon-input {
+	align-items : center;
+	display : flex;
+	padding-left: 15vw;
 
 }
 .vt-ribbon-button {

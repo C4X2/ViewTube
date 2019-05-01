@@ -6,8 +6,10 @@
 <html>
 <head>
 	<style type="text/css">
-		form {border: 3px solid #f1f1f1;}
+		.card {border: 3px solid #f1f1f1;}
+		/*
 		.border-hoarder {border: 3px solid #f1f1f1;}
+		*/
 	</style>
 	<meta charset="ISO-8859-1">
 	<title>ViewTube</title>
@@ -34,7 +36,7 @@
 	<div class="container-fluid">
 		<div class="card login-card">
 			<div class="card-header">
-				<h2 class="bg-primary card-title text-white text-center">${login} ${signup}</h2>
+				<h2 class="card-title text-center"><span class="glyphicon glyphicon-lock"></span>${login} ${signup}</h2>
 			</div>
 			<div class="card-body">
 				<form method="POST" action="loginattempt.html">
@@ -55,7 +57,8 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<a class="btn btn-danger" type="button" onclick="">Cancel</a>
+						<a class="btn btn-danger text-right" type="button" onclick="">Cancel</a>
+						<span style="padding-left: 12.5vw;"></span>
 						<span class="text-right"><a class="btn btn-info text-right" type="submit">${login} ${signup}</a></span>
 					</div>
 				</form>

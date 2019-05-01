@@ -90,4 +90,5 @@ public class ViewTubeViewer extends ViewTubeUser {
 	public void setTaggedVideos(ArrayList<Video> taggedVideos) {
 		this.taggedVideos = taggedVideos;
 	}
+
 }
