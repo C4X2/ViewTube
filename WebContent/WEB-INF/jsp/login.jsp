@@ -7,9 +7,6 @@
 <head>
 	<style type="text/css">
 		.card {border: 3px solid #f1f1f1;}
-		/*
-		.border-hoarder {border: 3px solid #f1f1f1;}
-		*/
 	</style>
 	<meta charset="ISO-8859-1">
 	<title>ViewTube</title>
@@ -36,7 +33,19 @@
 	<div class="container-fluid">
 		<div class="card login-card">
 			<div class="card-header">
-				<h2 class="card-title text-center"><span class="glyphicon glyphicon-lock"></span>${login} ${signup}</h2>
+				<h2 class="card-title text-center">
+					<span class="dropdown">
+						<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-lock"></span>
+						</a>
+						<span class="dropdown-menu">
+							<a class="dropdown-item" href="#">Viewer Login</a>
+  							<a class="dropdown-item" href="#">Advertiser Login</a>
+  							<a class="dropdown-item" href="#">Creator Login</a>
+  							<a class="dropdown-item" href="#">Curator/Moderator Login</a>
+						</span>				
+					</span>${login} ${signup}
+				</h2>
 			</div>
 			<div class="card-body">
 				<form method="POST" action="loginattempt.html">
@@ -67,11 +76,6 @@
 				<div class="border-hoarder text-center">
     				<a class="card-link" href="#">Forgot password?</a>
     				<a class="card-link" href="signup.html">Or Sign Up</a>
-  				</div>
-  				<div class="row text-center">
-  					<a class="card-link" href=''>Advertiser Login</a>
-  					<a class="card-link" href="">Creator Login</a>
-  					<a class="card-link" href="">Curator/Moderator Login</a>
   				</div>
 			</div>
 		</div>

@@ -39,11 +39,15 @@
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li class="vt-ribbon-list-elem">
-                    <a class="vt-ribbon-personal" href="login.html">
+                <li class="vt-ribbon-list-elem nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 						<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
 				    	<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
-				    </a>
+					</a>
+				<div class="dropdown-menu">
+        				<a class="dropdown-item" href="login.html"><span class="glyphicon glyphicon-lock"></span>Login</a><br/>
+        				<a class="dropdown-item" href="subscriptions.html"><span class="glyphicon glyphicon-pushpin"></span>Subscriptions</a>
+  				</div>
                 </li>
             </ul>
         </div>
@@ -53,14 +57,9 @@
         <h2>
             Welcome to ViewTube
             <br><br>
+            <!-- TODO Will have a moving wheel of recommended videos -->
+            <!-- TODO Will have a moving wheel of hot videos -->
         </h2>
-        <h3>
-            <a href="welcome.html">Click here to navigate to the Welcome Page</a>
-            <br><br>
-        </h3>
-        <h3>
-            <a href="subscriptions.html">Click here to navigate to the Subscriptions Page</a>
-        </h3>
     </div>
 
     <div class="vt-bottom-ribbon">
