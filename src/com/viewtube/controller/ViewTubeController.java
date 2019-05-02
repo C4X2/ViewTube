@@ -28,15 +28,15 @@ public class ViewTubeController {
 	public ModelAndView viewTubeLoginPath(ModelAndView view) {
 		ViewTubeViewer viewer = new ViewTubeViewer();
 		view.addObject("viewtuber", viewer);
-		view.addObject("card-title", "Login");
-		view.addObject("button-text", "Login");
+		view.addObject("cardTitle", "Login");
+		view.addObject("buttonText", "Login");
 		return view;
 	}
 	
 	@RequestMapping(path = "/signup", method = RequestMethod.GET)
 	public ModelAndView viewTubeSignUpPath(ModelAndView view) {
-		view.addObject("card-title", "Sign Up!");
-		view.addObject("button-text", "Sign Up!");
+		view.addObject("cardTitle", "Sign Up!");
+		view.addObject("buttonText", "Sign Up!");
 		view.setViewName("login");
 		return view;
 	}

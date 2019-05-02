@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 
 <!DOCTYPE html>
 <html>
@@ -44,7 +45,7 @@
   							<a class="dropdown-item" href="#">Creator Login</a><br/>
   							<a class="dropdown-item" href="#">Curator/Moderator Login</a>
 						</span>				
-					</span>${card-title}
+					</span>${cardTitle}
 				</h2>
 			</div>
 			<div class="card-body">
@@ -68,7 +69,7 @@
 					<div class="form-group">
 						<a class="btn btn-danger text-right" type="button" onclick="">Cancel</a>
 						<span style="padding-left: 12.5vw;"></span>
-						<a class="btn btn-info text-right" type="submit"><span class="text-right"></span>${button-text}</a>
+						<a class="btn btn-info text-right" type="submit"><span class="text-right"></span>${buttonText}</a>
 					</div>
 				</form>
 			</div>
