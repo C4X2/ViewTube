@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html>
-
 <head>
     <title>ViewTube</title>
 
@@ -46,7 +46,9 @@
 					</a>
 				<div class="dropdown-menu">
         				<a class="dropdown-item" href="login.html"><span class="glyphicon glyphicon-lock"></span>Login</a><br/>
-        				<a class="dropdown-item" href="subscriptions.html"><span class="glyphicon glyphicon-pushpin"></span>Subscriptions</a>
+        				<c:if test="${loggedOn}">
+        				 <a class="dropdown-item" href="subscriptions.html"><span class="glyphicon glyphicon-pushpin"></span>Subscriptions</a>
+  						</c:if>
   				</div>
                 </li>
             </ul>

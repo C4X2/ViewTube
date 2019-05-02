@@ -42,7 +42,7 @@
                 <li class="vt-ribbon-list-elem">
                     <a class="vt-ribbon-personal" href="login.html">
 						<img class = "vt-ribbon-icon" alt="profile_picutre" src="resources/img/loin.png">
-				    	<!-- Eventually replace the static icon with a dynamically generated one src="#{usericon}" -->
+				    	<!-- Eventually replace the static icon with a dynamically generated one src="${usericon}" -->
 				    </a>
                 </li>
             </ul>

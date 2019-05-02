@@ -28,13 +28,15 @@ public class ViewTubeController {
 	public ModelAndView viewTubeLoginPath(ModelAndView view) {
 		ViewTubeViewer viewer = new ViewTubeViewer();
 		view.addObject("viewtuber", viewer);
-		view.addObject("login", "Login");
+		view.addObject("card-title", "Login");
+		view.addObject("button-text", "Login");
 		return view;
 	}
 	
 	@RequestMapping(path = "/signup", method = RequestMethod.GET)
 	public ModelAndView viewTubeSignUpPath(ModelAndView view) {
-		view.addObject("signup", "Sign Up!");
+		view.addObject("card-title", "Sign Up!");
+		view.addObject("button-text", "Sign Up!");
 		view.setViewName("login");
 		return view;
 	}
@@ -51,5 +53,14 @@ public class ViewTubeController {
 		//else return to the login page and complain
 		return "login";
 	}
+	
+	
+	@RequestMapping(path="/generalerror", method = RequestMethod.GET)
+	public ModelAndView errorMapping(ModelAndView view) {
+		System.out.println("Rerouting location to the generalerror page");
+		view.setViewName("generalerror");
+		return view;
+	}
+
 
 }

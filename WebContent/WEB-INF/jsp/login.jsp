@@ -39,12 +39,12 @@
 							<span class="glyphicon glyphicon-lock"></span>
 						</a>
 						<span class="dropdown-menu">
-							<a class="dropdown-item" href="#">Viewer Login</a>
-  							<a class="dropdown-item" href="#">Advertiser Login</a>
-  							<a class="dropdown-item" href="#">Creator Login</a>
+							<a class="dropdown-item" href="#">Viewer Login</a><br/>
+  							<a class="dropdown-item" href="#">Advertiser Login</a><br/>
+  							<a class="dropdown-item" href="#">Creator Login</a><br/>
   							<a class="dropdown-item" href="#">Curator/Moderator Login</a>
 						</span>				
-					</span>${login} ${signup}
+					</span>${card-title}
 				</h2>
 			</div>
 			<div class="card-body">
@@ -68,7 +68,7 @@
 					<div class="form-group">
 						<a class="btn btn-danger text-right" type="button" onclick="">Cancel</a>
 						<span style="padding-left: 12.5vw;"></span>
-						<span class="text-right"><a class="btn btn-info text-right" type="submit">${login} ${signup}</a></span>
+						<a class="btn btn-info text-right" type="submit"><span class="text-right"></span>${button-text}</a>
 					</div>
 				</form>
 			</div>
