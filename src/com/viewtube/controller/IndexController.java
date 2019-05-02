@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping()
 public class IndexController {
+	/*
 	@GetMapping(value="/")
 	public ModelAndView indexView() {
 		return new ModelAndView("index");
@@ -21,5 +22,5 @@ public class IndexController {
 	@GetMapping(value="index")
 	public ModelAndView indexView3() {
 		return new ModelAndView("index");
-	}
+	}*/
 }
